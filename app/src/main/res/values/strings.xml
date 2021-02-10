@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">TinkTest</string>
+    <string name="error_fetching_dogs">Error fetching dogs</string>
+    <string name="retry">Retry</string>
 </resources>
