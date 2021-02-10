@@ -8,17 +8,11 @@ import br.com.matthaus.tinktest.network.model.RandomDogsResponse
 import br.com.matthaus.tinktest.repository.DogRepository
 import kotlinx.coroutines.launch
 
-class DogListViewModel : ViewModel() {
+class DogListViewModel(private val dogRepository: DogRepository) : ViewModel() {
 
-    private var dogRepository: DogRepository
+    private val _randomDogs : MutableLiveData<List<String>> = MutableLiveData()
 
-    private val _randomDogs : MutableLiveData<RandomDogsResponse> = MutableLiveData()
-
-    init {
-        dogRepository = DogRepository()
-    }
-
-    fun getRandomDogs() : LiveData<RandomDogsResponse> {
+    fun getRandomDogs() : LiveData<List<String>> {
         viewModelScope.launch {
             val randomDogs = dogRepository.getRandomDogs()
             _randomDogs.postValue(randomDogs)
