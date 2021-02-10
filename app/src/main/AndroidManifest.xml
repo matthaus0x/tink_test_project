@@ -11,7 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.TinkTest">
-        <activity android:name=".feature.doglist.MainActivity">
+        <activity android:name=".feature.doglist.DogListActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
