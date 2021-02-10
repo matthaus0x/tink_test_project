@@ -2,4 +2,6 @@
     <string name="app_name">TinkTest</string>
     <string name="error_fetching_dogs">Error fetching dogs</string>
     <string name="retry">Retry</string>
+    <string name="image_showing_dog_photo">Image showing the dog photo</string>
+    <string name="loading">Loading</string>
 </resources>
